@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+ 
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -62,12 +63,26 @@ img {
     padding: 24px 0;
 }
 
-.navbar-list .navbar-link .link {
+.navbar-list .link {
     color:#2E2F42;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+.link {
+    position: relative;
+    color: #404bbf;
+}
+.navbar-list .navbar-link .link::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
 }
 
 .navbar-list .navbar-link .link:hover,
@@ -75,7 +90,7 @@ img {
     color: #404bbf;
 }
 
-.navbar-right .link {
+.navbar-right .navbar-list .link {
     color:#434455;
     font-size: 16px;
     line-height: 1.5;
@@ -259,9 +274,9 @@ cursor: pointer;
 .social-media_link:focus{
     background-color: #404bbf;
 }
-/*.social-media_svg{
+.social-media_svg{
     fill: #f4f4fd;
-} */
+}
 .fourth-section {
     padding: 120px 0;
 }
